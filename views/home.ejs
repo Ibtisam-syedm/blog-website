@@ -4,4 +4,13 @@
 <p><%= post1 %> </p>
 
 
+
+<% posts.forEach(post => {%>
+    <br>
+    <h1><%=post.title%></h1>
+    <p><%=post.context.substring(0,20) + "..."%><a href="/posts/<%= post.title %> " >Read More</a>
+    </p>
+
+<% }); %>
+
 <%- include('./partials/footer.ejs') %>
